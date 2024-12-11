@@ -1,0 +1,152 @@
+.family-section {
+  background: linear-gradient(
+    81deg,
+    #e7f0ff 9.01%,
+    rgba(232, 241, 255, 0.47) 89.11%
+  );
+  height: 789px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.family-section-container {
+  width: 82.25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.family-section-content {
+  width: 50%;
+}
+.family-section-content h3 {
+  color: #2AA7FF;
+  margin-bottom: 0.5rem;
+  font-family: Poppins;
+font-size: 17px;
+font-weight: 600;
+line-height: 18px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+.family-section-heading {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 67px;
+  color: #1b3c74;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-family: Poppins;
+font-size: 48px;
+font-weight: 600;
+line-height: 67px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+.family-section-content p {
+  color: #77829d;
+  font-family: Inter;
+font-size: 17px;
+font-weight: 500;
+line-height: 40.8px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+@media (max-width: 767px) {
+  .family-section {
+    height: auto; 
+    padding: 2rem 1rem; 
+  }
+
+  .family-section-container {
+    flex-direction: column; 
+    gap: 2rem;
+    width: 90%; 
+  }
+
+  .family-section-content {
+    width: 100%;
+  }
+
+  .family-section-images {
+    width: 100%; 
+    text-align: center;
+  }
+
+  .family-section-images img {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
+  }
+
+  .family-section-content h3 {
+    font-size: 14px; 
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .family-section-heading {
+    font-size: 32px; 
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .family-section-content p {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .family-section-container {
+    gap: 2rem;
+    width: 85%;
+  }
+
+  .family-section-content {
+    width: 50%; 
+  }
+
+  .family-section-images {
+    width: 50%; 
+  }
+
+  .family-section-content h3 {
+    font-size: 16px; 
+    text-align: left; 
+  }
+
+  .family-section-heading {
+    font-size: 40px; 
+    line-height: 50px;
+  }
+
+  .family-section-content p {
+    font-size: 16px; 
+    line-height: 28px;
+  }
+
+  .family-section-images img {
+    width: 100%;
+    max-width: 500px; 
+    height: auto;
+  }
+}
+
+@media (min-width: 1025px) {
+  .family-section-container {
+    width: 80%; 
+  }
+
+  .family-section-images img {
+    width: 100%;
+    max-width: 600px; 
+    height: auto;
+  }
+}

@@ -1,0 +1,186 @@
+.faq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 708.84px;
+}
+
+.faq-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.faq-subheading {
+  color: #1b3c74;
+  font-size: 48px;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.faq-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2AA7FF;
+  text-align: center;
+}
+
+.faq-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.faq-content-images {
+  position: relative;
+}
+.faq-image {
+  width: 500px;
+  height: 480px;
+}
+
+.happy-patients-image {
+  position: absolute;
+  bottom: 100px;
+  left: -85px;
+  transform: scale(0.7);
+}
+
+.faq-love {
+  position: absolute;
+  top: 100.82px;
+  right: -30px;
+  transform: scale(0.7);
+}
+
+.accordion {
+  width: 50%;
+  margin: auto 0;
+}
+
+@media (max-width: 767px) {
+  .faq {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .faq-container {
+    width: 90%;
+  }
+
+  .faq-heading {
+    font-size: 0.9rem;
+  }
+
+  .faq-subheading {
+    font-size: 32px;
+    margin-top: 1rem;
+  }
+
+  .faq-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .faq-content-images {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .faq-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .happy-patients-image {
+    bottom: 50px;
+    left: -50px;
+    transform: scale(0.6);
+  }
+
+  .faq-love {
+    top: 50px;
+    right: -20px;
+    transform: scale(0.6);
+  }
+
+  .accordion {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .faq-container {
+    width: 85%;
+  }
+
+  .faq-subheading {
+    font-size: 40px;
+  }
+
+  .faq-content {
+    gap: 1.5rem;
+  }
+
+  .faq-content-images {
+    width: 50%;
+  }
+
+  .faq-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .happy-patients-image {
+    bottom: 80px;
+    left: -65px;
+    transform: scale(0.65);
+  }
+
+  .faq-love {
+    top: 70px;
+    right: -25px;
+    transform: scale(0.65);
+  }
+
+  .accordion {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .faq-container {
+    width: 80%;
+  }
+
+  .faq-content-images {
+    width: 50%;
+  }
+
+  .faq-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .happy-patients-image {
+    bottom: 100px;
+    left: -85px;
+    transform: scale(0.7);
+  }
+
+  .faq-love {
+    top: 100px;
+    right: -30px;
+    transform: scale(0.7);
+  }
+
+  .accordion {
+    width: 50%;
+  }
+}

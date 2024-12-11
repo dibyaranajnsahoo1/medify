@@ -1,0 +1,153 @@
+.specialisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    81deg,
+    #e7f0ff 9.01%,
+    #E8F1FF78 89.11%
+  );
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.specialisation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  height: auto;
+  width: 81.25%;
+}
+
+.specialisation-heading {
+  width: 532px;
+  height: 67px;
+  font-family: Poppins;
+  font-weight: 600;
+  align-items: center;
+  font-size: 48px;
+  line-height: 67px;
+  color: #1b3c74;
+}
+
+.specialisation-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.specialisation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 270px;
+  height: 180px;
+  background-color: #ffffff;
+  box-shadow: 0px 34px 44px 0px #d5dbe470;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease; 
+}
+
+.specialisation-card:hover {
+  transform: scale(1.01); 
+  background-color: #eaf1fe;
+  color: #2799eb;
+  border: 1px solid #2799eb;
+}
+
+.specialisation-card img {
+  width: 80px;
+  height: 80px;
+}
+
+.specialisation-card p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: center;
+  color: #abb6c7;
+}
+
+
+.view-all-button {
+  width: 147px;
+  height: 50px;
+  border-radius: 8px;
+  background: #2799eb;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease; 
+}
+
+.view-all-button:hover {
+  background-color: #0b6eb5; 
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .specialisation-cards {
+    gap: 1.5rem; 
+  }
+  .specialisation-card {
+    width: 240px; 
+    height: 160px;
+  }
+  .specialisation-card img {
+    width: 70px; 
+    height: 70px; 
+  }
+}
+
+@media (max-width: 992px) {
+  .specialisation-container {
+    width: 90%; 
+    gap: 2rem; 
+  }
+  .specialisation-cards {
+    gap: 1rem; 
+  }
+  .specialisation-card {
+    width: 220px; 
+    height: 150px;
+  }
+  .specialisation-card img {
+    width: 60px; 
+    height: 60px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .specialisation-container {
+    width: 100%; 
+    padding: 0 10px; 
+  }
+  .specialisation-cards {
+    flex-direction: column; 
+    gap: 1rem; 
+  }
+  .specialisation-card {
+    width: 100%; 
+    height: 120px; 
+    margin-bottom: 1rem; 
+  }
+  .specialisation-card img {
+    width: 50px; 
+    height: 50px; 
+  }
+  .view-all-button {
+    width: 100%;
+    height: 45px; 
+  }
+}

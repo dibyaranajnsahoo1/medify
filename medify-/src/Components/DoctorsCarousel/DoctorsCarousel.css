@@ -1,0 +1,81 @@
+.slide {
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  display: flex;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: '48px';
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #1B3C74;
+  line-height: 67px;
+
+}
+.slide-img {
+  background: linear-gradient(144.2deg, #e1f3ff 0%, #2aa7ff 100%);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  overflow: hidden;
+  border: 8px solid white;
+  box-shadow: 0px 15px 55px -10px #00000017;
+  height: 394px;
+  width: 350px;
+}
+.slide-img > img {
+  transform: translateY(40px);
+  height: 100%;
+  width: 100%;
+}
+.slide-name {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: center;
+  color: #1b3c74;
+}
+.slide-specialisation {
+  color: #2AA7FF;
+  margin-top: -1rem;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 27px;
+  text-align: center;
+}
+.doctors-carousel {
+  padding: 3rem 0;
+  width: 1442px;
+  margin: auto;
+  height: 650px;
+
+}
+.slide {
+  margin: 0; 
+  padding: 0;
+}
+
+.slide-img {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  .slide-img {
+    height: 350px;
+    width: 300px;
+  }
+
+  .slide-name {
+    font-size: 20px;
+  }
+}
