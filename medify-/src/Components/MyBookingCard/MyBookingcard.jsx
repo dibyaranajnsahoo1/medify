@@ -1,30 +1,102 @@
 import React from "react";
-import hospitalIcon from "../../assets/bookingHospitalIcon.png";
+import hospitalIcon from "../../assets/div.u-pos-has.png";
+import Like from "../../assets/span.o-label--success.png";
 
 const MyBookingcard = ({ hospital, booking }) => {
   return (
-    <div className="shadow-md rounded-md mb-8">
-      <div className="flex py-8 px-12 w-full justify-center h-[260px] gap-4  bg-white">
-        <div className="bg-[#8CCFFF] w-[124px] h-[124px] rounded-[50%] flex items-center justify-center self-start">
-          <img src={hospitalIcon} alt="" className="w-[90px] h-[90px]" />
+    <div style={{marginBottom: "32px" }}>
+      <div
+        style={{
+          display: "flex",
+          padding: "32px 48px",
+          width: "786PX",
+          justifyContent: "center",
+          height: "268.38px",
+          gap: "20px",
+          backgroundColor: "#FFFFFF",
+          borderRadius:'15px',
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)"
+        }}
+      >
+        <div
+          style={{
+          
+            width: "140px",
+            height: "1440x",
+       
+          }}
+        >
+          <img
+            src={hospitalIcon}
+            alt=""
+            style={{ width: "140px", height: "142px" }}
+          />
         </div>
 
-        <div className="self-start flex-grow">
-          <p className="text-[#14BEF0] font-semibold text-xl mb-5">
+        <div style={{ alignSelf: "flex-start", flexGrow: 1 }}>
+          <p
+            style={{
+              color: "#14BEF0",
+              fontWeight: "600",
+              fontSize: "20px",
+              marginBottom: "20px",
+            }}
+          >
             {hospital["Hospital Name"]}
           </p>
 
-          <p className="font-bold text-[#414146] text-sm">
+          <p
+            style={{
+              fontWeight: "700",
+              color: "#414146",
+              fontSize: "14px",
+            }}
+          >
             {`${hospital.City}, ${hospital.State}`}
           </p>
           <p>{hospital["Hospital Type"]}</p>
+          <img src={Like} alt="like" />
         </div>
 
-        <div className="self-start flex gap-4">
-          <button className="text-[#2AA7FF] text-sm bg-white rounded-sm  text-[#2AA7FF] py-1 px-4 w-fit border-2 border-[#2AA7FF]">
+        <div style={{ alignSelf: "flex-start", display: "flex", gap: "5px" }}>
+          <button
+            style={{
+              display: 'flex',
+              fontFamily:'Lato',
+              color: "#2AA7FF",
+              fontSize: "10px",
+              backgroundColor: "white",
+              borderRadius: "3px",
+              padding: "4px 16px",
+              border: "1px solid #2AA7FF",
+              width: "90px",
+              height:'25.59px',
+              alignItem:'center',
+              textAlign:'center',
+              justifyContent:'center'
+              
+            }}
+          >
             {booking.date}
           </button>
-          <button className="text-[#007100] text-sm bg-white rounded-sm text-[#007100] py-1 px-4 w-fit border-2 border-[#007100]">
+          <button
+            style={{
+              color: "#007100",
+              fontSize: "12px",
+              fontWeight:'700',
+              display: 'flex',
+              fontFamily:'Lato',
+              backgroundColor: "white",
+              borderRadius: "3px",
+              padding: "4px 16px",
+              border: "1px solid #00A500",
+              width: "90px",
+              height:'25.59px',
+              alignItem:'center',
+              textAlign:'center',
+              justifyContent:'center'
+            }}
+          >
             {booking.slot}
           </button>
         </div>

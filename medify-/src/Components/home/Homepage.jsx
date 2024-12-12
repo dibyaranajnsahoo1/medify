@@ -15,6 +15,7 @@ import { useNavigate } from "react-router-dom";
 import Slides from '../../Components/Slides/Slide'
 
 
+
 const Homepage = ({
   states,
   fetchCities,
@@ -61,6 +62,7 @@ const Homepage = ({
       <Faq />
       <AppDownload />
       <Footer />
+     
     </div>
   );
 };

@@ -5,8 +5,8 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Homepage from "./Components/home/Homepage";
-import SearchPage from "./Pages/SearchPage";
-import MyBookingsPage from "./Pages/MyBookingsPage";
+import SearchPage from "./SearchPage/SearchPage";
+import MyBookingsPage from "./MyBookingsPage/MyBookingsPage";
 
 function App() {
   const [states, setStates] = useState([]);

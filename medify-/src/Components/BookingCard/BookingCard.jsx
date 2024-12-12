@@ -1,40 +1,41 @@
 import React, { useEffect, useState } from "react";
-import hospitalIcon from "../../assets/bookingHospitalIcon.png";
+import hospitalIcon from "../../assets/div.u-pos-has.png";
 import { Tabs, Tab, Box } from "@mui/material";
 import { addDays, format } from "date-fns";
 import { useNavigate } from "react-router-dom";
+import Like from "../../assets/span.o-label--success.png";
+import './BookingCard.css';
+
 const BookingCard = ({ hospital, onBooking, booking, type }) => {
-  const [expanded, setExpanded] = useState(false);
-  const [value, setValue] = useState(0);
-  const [weekDates, setWeekDates] = useState([]);
-  const [slots, setSlots] = useState({});
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [selectedTab, setSelectedTab] = useState(0);
+  const [weekDays, setWeekDays] = useState([]);
+  const [availableSlots, setAvailableSlots] = useState({});
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    generateWeekDates();
+    generateWeekDays();
   }, []);
 
   useEffect(() => {
-    generateSlots(weekDates);
-  }, [weekDates]);
-  const generateWeekDates = () => {
-    const dates = Array.from({ length: 7 }, (_, i) => addDays(new Date(), i));
+    generateAvailableSlots(weekDays);
+  }, [weekDays]);
 
-    setWeekDates(dates);
+  const generateWeekDays = () => {
+    const days = Array.from({ length: 7 }, (_, i) => addDays(new Date(), i));
+    setWeekDays(days);
   };
 
-  const handleSlotSelect = (slot, date) => {
-    onBooking(hospital, slot, date);
+  const handleSlotSelect = (selectedSlot, selectedDate) => {
+    onBooking(hospital, selectedSlot, selectedDate);
     navigate("/bookings");
   };
 
-  const generateSlots = () => {
-    const generatedSlots = {};
-    weekDates.forEach((date) => {
-      const daySlots = [
-        { time: "10:30 AM", period: "Morning" },
-        { time: "11:00 AM", period: "Morning" },
+  const generateAvailableSlots = () => {
+    const slotsData = {};
+    weekDays.forEach((day) => {
+      const slots = [
         { time: "11:30 AM", period: "Morning" },
         { time: "12:00 PM", period: "Afternoon" },
         { time: "12:30 PM", period: "Afternoon" },
@@ -46,26 +47,26 @@ const BookingCard = ({ hospital, onBooking, booking, type }) => {
         { time: "07:00 PM", period: "Evening" },
         { time: "07:30 PM", period: "Evening" },
       ];
-      generatedSlots[format(date, "yyyy-MM-dd")] = daySlots;
+      slotsData[format(day, "yyyy-MM-dd")] = slots;
     });
-    setSlots(generatedSlots);
+    setAvailableSlots(slotsData);
   };
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const handleTabChange = (event, newTab) => {
+    setSelectedTab(newTab);
   };
 
-  const toggleExpand = () => {
-    setExpanded(!expanded);
+  const toggleSlotExpansion = () => {
+    setIsExpanded(!isExpanded);
   };
 
-  const groupSlotsByPeriod = (daySlots) => {
+  const organizeSlotsByPeriod = (slots) => {
     const groupedSlots = {
       Morning: [],
       Afternoon: [],
       Evening: [],
     };
-    daySlots.forEach((slot) => {
+    slots.forEach((slot) => {
       groupedSlots[slot.period].push(slot);
     });
     return groupedSlots;
@@ -75,115 +76,96 @@ const BookingCard = ({ hospital, onBooking, booking, type }) => {
     <Tab
       {...props}
       label={
-        <div className="flex flex-col items-center bg-white">
-          <span className="text-[#414146]  font-bold">{label}</span>
-          <span className="text-xs text-[#01A400]">{subtext}</span>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'white' }}>
+          <span style={{ color: '#414146', fontWeight: 'bold' }}>{label}</span>
+          <span style={{ fontSize: '0.75rem', color: '#01A400' }}>{subtext}</span>
         </div>
       }
     />
   );
+
   return (
-    <div className="w-full shadow-md">
-      <div className="flex py-8 px-12 w-full justify-center h-[260px] gap-4  bg-white">
-        <div className="bg-[#8CCFFF] w-[124px] h-[124px] rounded-[50%] flex items-center justify-center self-start">
-          <img src={hospitalIcon} alt="" className="w-[90px] h-[90px]" />
+    <div style={{ width: '100%', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', marginBottom: '20px' }}>
+      <div className="booking-card-container">
+        <div className="hospital-icon-container">
+          <img src={hospitalIcon} alt="" className="hospital-icon" />
         </div>
 
-        <div className="self-center flex-grow">
-          <p className="text-[#14BEF0] font-semibold text-xl mb-5">
-            {hospital["Hospital Name"]}
-          </p>
-
-          <p className="font-bold text-[#414146] text-sm">
-            {`${hospital.City}, ${hospital.State}`}
-          </p>
+        <div className="hospital-info">
+          <p className="hospital-name">{hospital["Hospital Name"]}</p>
+          <p className="hospital-location">{`${hospital.City}, ${hospital.State}`}</p>
           <p>{hospital["Hospital Type"]}</p>
-          <p className="mt-2">
-            <span className="text-[#02A401] font-bold text-sm mr-2">FREE</span>
-            <span className="text=[#787887] line-through mr-2">500</span>
+          <p className="consultation-fee">
+            <span className="free-fee">FREE</span>
+            <span className="original-fee">500</span>
             Consultation fee at clinic
           </p>
+          <img src={Like} alt="like" />
         </div>
         {type === "search" && (
-          <div className="self-end">
-            <p className="text-[#01A400] font-medium text-sm text-center">
-              Available Today
-            </p>
-            <button
-              className="flex items-center w-[212px] h-[40px]] justify-center text-sm text-white text-sm font-medium bg-[#2AA7FF] shadow-sm border-none rounded-[4px] mt-2 h-[40px]"
-              onClick={toggleExpand}
-            >
+          <div className="book-button-container">
+            <p className="available-today">Available Today</p>
+            <button className="book-button" onClick={toggleSlotExpansion}>
               Book FREE Center Visit
             </button>
           </div>
         )}
       </div>
-      {expanded && (
-        <div className="w-full bg-white">
-          <div className="w-4/5 mx-auto">
+
+      {isExpanded && (
+        <div className="slots-section">
+          <div className="tabs-container">
             <Tabs
-              value={value}
-              onChange={handleChange}
+              value={selectedTab}
+              onChange={handleTabChange}
               variant="scrollable"
               scrollButtons
               aria-label="booking dates tabs"
-              sx={{
-                background: "white",
-                boxShadow: "none",
-                marginBottom: "0px",
-              }}
             >
-              {weekDates.map((date, index) => (
+              {weekDays.map((day, index) => (
                 <CustomTab
                   key={index}
-                  sx={{
-                    width: "33.33%",
-                  }}
+                  style={{ width: '33.33%' }}
                   label={
                     index === 0
                       ? "Today"
                       : index === 1
                       ? "Tomorrow"
-                      : format(date, "EEE, d MMM")
+                      : format(day, "EEE, d MMM")
                   }
                   subtext={`${
-                    slots[format(date, "yyyy-MM-dd")]?.length || 0
+                    availableSlots[format(day, "yyyy-MM-dd")]?.length || 0
                   } slots Available`}
                 />
               ))}
             </Tabs>
+          </div>
 
-            <div className="mt-4 bg-white">
-              {Object.entries(slots).map(([date, daySlots], index) => (
-                <div key={date} hidden={value !== index}>
-                  {Object.entries(groupSlotsByPeriod(daySlots)).map(
-                    ([period, slots]) => (
-                      <div
-                        key={period}
-                        className=" flex items-center gap-12 px-4 py-8 bg-white w-full border-b-2 border-b-gray-200 "
-                      >
-                        <div className="w-1/6">
-                          <h4 className="font-normal mb-2 text-[#414146]">
-                            {period}
-                          </h4>
-                        </div>
-                        <div className=" flex flex-grow gap-4 flex-wrap ">
-                          {slots.map((slot, slotIndex) => (
-                            <button
-                              key={slotIndex}
-                              className="text-[#2AA7FF] text-sm bg-white rounded-sm hover:bg-blue-50 text-[#2AA7FF] py-1 px-4 w-fit border-2 border-[#2AA7FF]"
-                              onClick={() => handleSlotSelect(slot.time, date)}
-                            >
-                              {slot.time}
-                            </button>
-                          ))}
-                        </div>
+          <div className="slots-content">
+            {Object.entries(availableSlots).map(([date, daySlots], index) => (
+              <div key={date} hidden={selectedTab !== index}>
+                {Object.entries(organizeSlotsByPeriod(daySlots)).map(
+                  ([period, slots]) => (
+                    <div key={period} className="slot-period-container">
+                      <div className="period-heading">
+                        <h4>{period}</h4>
                       </div>
-                    )
-                  )}
-                </div>
-              ))}
-            </div>
+                      <div className="slots-list">
+                        {slots.map((slot, slotIndex) => (
+                          <button
+                            key={slotIndex}
+                            className="slot-button"
+                            onClick={() => handleSlotSelect(slot.time, date)}
+                          >
+                            {slot.time}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )
+                )}
+              </div>
+            ))}
           </div>
         </div>
       )}

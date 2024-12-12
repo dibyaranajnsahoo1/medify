@@ -1,10 +1,11 @@
 import React from "react";
 import bookingOfferImage from "../../assets/sensodyne_dweb.png.png";
+import "./BookingOfferCard.css"; // Import the CSS file
 
 const BookingOfferCard = () => {
   return (
-    <div className="rounded-xl w-[363px] h-[268px] shadow-md hidden md:block bg-white">
-      <img src={bookingOfferImage} alt="" className="w-full h-full" />
+    <div className="booking-offer-card">
+      <img src={bookingOfferImage} alt="Booking Offer" />
     </div>
   );
 };

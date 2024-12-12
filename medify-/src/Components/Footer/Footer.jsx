@@ -83,7 +83,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="linebreak">{/* linebreak */}</div>
+        <div className="linebreak"></div>
+        
         <div className="copyright">
           Copyright ©2023 Surya Nursing Home.com. All Rights Reserved
         </div>

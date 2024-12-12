@@ -18,11 +18,11 @@ const SearchBar = ({
   type,
 }) => {
   return (
-    <div className="wrapper-searchBar shadow-xl">
+    <div className="wrapper-searchBar shadow-xl" style={type==='bookings'?{ width:'780px', borderRadius:'15px', left:'521px'}:undefined}>
       {type === "search" && (
         <>
-          <div className="searchBox state w-1/4">
-            <LocationOnOutlinedIcon sx={{ mr: 1 }} />
+          <div className="searchBox state">
+            <LocationOnOutlinedIcon sx={{ mr: 2 }} />
             <Autocomplete
               options={states}
               value={currentState}
@@ -48,7 +48,13 @@ const SearchBar = ({
                   disableClearable
                 />
               )}
-              style={{ width: "100%" }}
+              style={{ width: '326px',
+                height: '30px',
+                gap: '0px',
+                borderRadius: '8px 0px 0px 0px',
+                border: '1px 0px 0px 0px',
+                opacity: '0px'
+                 }}
             />
           </div>
           <div className="searchBox city">
@@ -75,17 +81,22 @@ const SearchBar = ({
                   disableClearable
                 />
               )}
-              style={{ width: "100%" }}
+              style={{ width: '522px',
+                height: '30px',
+                gap: '0px',
+                border: '1px 0px 0px 0px',
+                opacity:' 0px'
+                 }}
             />
           </div>
         </>
       )}
 
-      {type === "booking" && (
-        <div className="searchBox state flex-grow">
-          <div className="flex w-full gap-4 p-4">
+      {type === "bookings" && (
+        <div className="searchBox state flex-grow" style={{ flexGrow: 1}} >
+          <div style={{ display: 'flex', width: '100%', gap: '16px', padding: '16px' }}>
             <LocationOnOutlinedIcon sx={{ mr: 1 }} />
-            <input type="text" className="w-full" />
+            <input type="text" className="w-full" placeholder="Search By Hospital"/>
           </div>
         </div>
       )}

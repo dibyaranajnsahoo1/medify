@@ -6,30 +6,31 @@ import BookingOfferCard from "../Components/BookingofferCard/BookingOfferCard";
 import MyBookingcard from "../Components/MyBookingCard/MyBookingcard";
 import AppDownload from "../Components/AppDownload/AppDownload";
 import Footer from "../Components/Footer/Footer";
+import './MyBookingsPage.css'
 
 const MyBookingsPage = ({ bookings, onBooking, hospitals }) => {
   return (
-    <div className="min-h-screen bg-[linear-gradient(81deg,_#EFF5FE_9.01%,_rgba(241,247,255,0.47)_89.11%)]">
+    <div className="booking-card" style={{ minHeight: '100vh', background: 'linear-gradient(81deg, #EFF5FE 9.01%, rgba(241,247,255,0.47) 89.11%)' }}>
       <HeaderRibbon />
       <Navbar />
-      <div className="bg-[#2AA7FF] h-[110px] w-full rounded-2xl rounded-t-none  z-0"></div>
-      <div className="flex justify-center items-center w-4/5 mx-auto mt-[-60px] mb-24 ">
-        <div className="w-full grid grid-rows-[auto,1fr] gap-4 mx-auto">
-          <div className="w-full flex items-start gap-2">
-            <h1 className="text-white font-bold text-[40px] ml-3 flex-grow">
+      <div style={{ backgroundColor: '#2AA7FF', height: '110px', width: '100%', borderRadius: '0 0 16px 16px ', borderTopLeftRadius: 'none', zIndex: 0 }}></div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '80%', margin: '0 auto', marginTop: '-60px', marginBottom: '24px' }}>
+        <div style={{ width: '100%', display: 'grid', gridTemplateRows: 'auto 1fr', gap: '16px', margin: '0 auto' }}>
+          <div style={{ width: '100%', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+            <h1 style={{ color: 'white', fontWeight: 'bold', fontSize: '40px', marginLeft: '12px'}}>
               My Bookings
             </h1>
-            <div className="w-[65%]">
-              <SearchBar type="booking" />
+            <div style={{ width: '50px'}}>
+              <SearchBar type="bookings" />
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-4 mt-8">
-            <div className="col-span-3">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px', marginTop: '32px' }}>
+            <div style={{ gridColumn: 'span 3' ,}}>
               {bookings.length > 0 ? (
                 bookings.map((booking, index) => (
                   <MyBookingcard
                     key={index}
-                    hospital={booking.hospital} // Make sure to pass correct props
+                    hospital={booking.hospital} 
                     booking={booking}
                   />
                 ))
@@ -37,7 +38,7 @@ const MyBookingsPage = ({ bookings, onBooking, hospitals }) => {
                 <p>No bookings found.</p>
               )}
             </div>
-            <div className="col-span-1 ">
+            <div style={{ gridColumn: 'span 1' }}>
               <BookingOfferCard />
             </div>
           </div>
