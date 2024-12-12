@@ -1,19 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/mainLogo.png";
 import { NavLink } from "react-router-dom";
 
 const Navbar = ({ type }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className={type === "home" ? "linear-background" : "navbar-alternate"}>
-      <div className="navbar-wrapper z-10">
+      <div className="navbar-wrapper">
         <div>
           <NavLink to="/">
-            <img src={logo} alt="logo" style={{ padding: "0px" , width:'92px', height:'27px', top:'72px'}} />
+            <img
+              src={logo}
+              alt="logo"
+              style={{ padding: "0px", width: "92px", height: "27px" }}
+            />
           </NavLink>
         </div>
-        <div className="nav-links">
-          
+        <button
+          className="hamburger-menu"
+          aria-label="Toggle navigation menu"
+          onClick={toggleMenu}
+        >
+          ☰
+        </button>
+        <div className={`nav-links ${isOpen ? "open" : ""}`}>
           {[
             { path: "/search", label: "Find Doctors" },
             { path: "/hospitals", label: "Hospitals" },
@@ -33,7 +49,6 @@ const Navbar = ({ type }) => {
               </NavLink>
             </div>
           ))}
-        
           <NavLink to="/bookings">
             <button className="booking-button" aria-label="View My Bookings">
               My Bookings

@@ -100,3 +100,32 @@
   height: 736px;
 }
 
+@media (max-width: 768px) {
+  .hero-wrapper{
+    top: 70px;
+  }
+  .medical {
+    font-family:Poppins ;
+    font-size: 40px;
+    font-weight: 700;
+    
+  }
+  
+  .center {
+    color: #2AA7FF;
+    font-family:Poppins ;
+    font-size: 40px;
+    font-weight: 700;
+    
+  
+  
+  }
+  .hero-heading p {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 20px;
+    
+    margin: 0; 
+    padding: 0; 
+  }
+}

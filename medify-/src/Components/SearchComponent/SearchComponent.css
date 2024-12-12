@@ -102,13 +102,17 @@ img {
   border: 1px solid #2799eb;
 }
 
-/* Responsive styles for smaller screens */
+
 
 @media (max-width: 768px) {
   .wrapper-searchComponent {
-    width: 90%;
+    width: 100%;
     padding: 1.5rem 1.2rem;
-    top: 450px; 
+    top: 5px; 
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
   }
 
   .wrapper-searchBox {
@@ -121,14 +125,18 @@ img {
   }
 
   .button {
-    width: 100%;
+    width: 60%;
     padding: 8px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
   }
 
   .wrapper-card {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
   }
 
   .card {
@@ -150,8 +158,10 @@ img {
 
 @media (max-width: 480px) {
   .wrapper-searchComponent {
-    top: 400px; 
+    width: 100%;
+    top: 5px; 
     padding: 1.2rem 1rem;
+    position: relative;
   }
 
   .searchBox {
@@ -163,8 +173,11 @@ img {
   }
 
   .button {
-    width: 100%;
+    width: 60%;
     padding: 8px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
   }
 
   .wrapper-card {

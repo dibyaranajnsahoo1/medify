@@ -1,8 +1,5 @@
 import React from "react";
 import "./Consultation.css";
-import consultDoc1 from "../../assets/consult-doc1.png";
-import consultDoc2 from "../../assets/consult-doc2.png";
-import freeConsultCard from "../../assets/free-consult-card.png";
 import bluetick from "../../assets/bluetick.png";
 import consultImg from "../../assets/consult-img.png";
 

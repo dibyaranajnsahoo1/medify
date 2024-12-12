@@ -85,8 +85,8 @@ const BookingCard = ({ hospital, onBooking, booking, type }) => {
   );
 
   return (
-    <div style={{ width: '100%', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', marginBottom: '20px' }}>
-      <div className="booking-card-container">
+    <div style={{ width: '100%', boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)', marginBottom: '20px' , borderRadius:'10px'}}>
+      <div className="booking-card-container" style={{borderRadius:'10px'}}>
         <div className="hospital-icon-container">
           <img src={hospitalIcon} alt="" className="hospital-icon" />
         </div>

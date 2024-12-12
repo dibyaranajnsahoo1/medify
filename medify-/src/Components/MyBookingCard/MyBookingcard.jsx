@@ -21,7 +21,7 @@ const MyBookingcard = ({ hospital, booking }) => {
         <div
           style={{
           
-            width: "140px",
+            width: "120px",
             height: "1440x",
        
           }}
@@ -58,19 +58,19 @@ const MyBookingcard = ({ hospital, booking }) => {
           <img src={Like} alt="like" />
         </div>
 
-        <div style={{ alignSelf: "flex-start", display: "flex", gap: "5px" }}>
+        <div style={{ alignSelf: "flex-start", display: "flex", gap: "5px", width:'230px' }}>
           <button
             style={{
               display: 'flex',
               fontFamily:'Lato',
               color: "#2AA7FF",
-              fontSize: "10px",
+              fontSize: "14px",
               backgroundColor: "white",
               borderRadius: "3px",
               padding: "4px 16px",
               border: "1px solid #2AA7FF",
-              width: "90px",
-              height:'25.59px',
+              width: "110px",
+              height:'29.59px',
               alignItem:'center',
               textAlign:'center',
               justifyContent:'center'
@@ -82,7 +82,7 @@ const MyBookingcard = ({ hospital, booking }) => {
           <button
             style={{
               color: "#007100",
-              fontSize: "12px",
+              fontSize: "17px",
               fontWeight:'700',
               display: 'flex',
               fontFamily:'Lato',
@@ -90,8 +90,8 @@ const MyBookingcard = ({ hospital, booking }) => {
               borderRadius: "3px",
               padding: "4px 16px",
               border: "1px solid #00A500",
-              width: "90px",
-              height:'25.59px',
+              width: "120px",
+              height:'29.59px',
               alignItem:'center',
               textAlign:'center',
               justifyContent:'center'

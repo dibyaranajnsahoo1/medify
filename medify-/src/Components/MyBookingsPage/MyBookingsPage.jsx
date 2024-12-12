@@ -1,11 +1,11 @@
-import HeaderRibbon from "../Components/HeaderRibbon/HeaderRibbon";
-import Navbar from "../Components/Navbar/Navbar";
-import SearchBar from "../Components/SearchBar/SearchBar";
-import BookingCard from "../Components/BookingCard/BookingCard";
-import BookingOfferCard from "../Components/BookingofferCard/BookingOfferCard";
-import MyBookingcard from "../Components/MyBookingCard/MyBookingcard";
-import AppDownload from "../Components/AppDownload/AppDownload";
-import Footer from "../Components/Footer/Footer";
+import HeaderRibbon from "../HeaderRibbon/HeaderRibbon";
+import Navbar from "../Navbar/Navbar";
+import SearchBar from "../SearchBar/SearchBar";
+import BookingCard from "../BookingCard/BookingCard";
+import BookingOfferCard from "../BookingofferCard/BookingOfferCard";
+import MyBookingcard from "../MyBookingCard/MyBookingcard";
+import AppDownload from "../AppDownload/AppDownload";
+import Footer from "../Footer/Footer";
 import './MyBookingsPage.css'
 
 const MyBookingsPage = ({ bookings, onBooking, hospitals }) => {

@@ -1,14 +1,14 @@
 import React from "react";
-import HeaderRibbon from "../Components/HeaderRibbon/HeaderRibbon";
-import Navbar from "../Components/Navbar/Navbar";
-import SearchBar from "../Components/SearchBar/SearchBar";
-import BookingOfferCard from "../Components/BookingofferCard/BookingOfferCard";
-import BookingCard from "../Components/BookingCard/BookingCard";
-import grayTick from "../assets/verified.1f87346e730e 1.png";
-import Faq from "../Components/Faq/Faq";
-import AppDownload from "../Components/AppDownload/AppDownload";
-import Footer from "../Components/Footer/Footer";
-import SearchComponent from "../Components/SearchComponent/SearchComponent";
+import HeaderRibbon from "../HeaderRibbon/HeaderRibbon";
+import Navbar from "../Navbar/Navbar";
+import SearchBar from "../SearchBar/SearchBar";
+import BookingOfferCard from "../BookingofferCard/BookingOfferCard";
+import BookingCard from "../BookingCard/BookingCard";
+import grayTick from "../../assets/verified.1f87346e730e 1.png";
+import Faq from "../Faq/Faq";
+import AppDownload from "../AppDownload/AppDownload";
+import Footer from "../Footer/Footer";
+import SearchComponent from "../SearchComponent/SearchComponent";
 
 const SearchPage = ({
   hospitals,
@@ -81,8 +81,7 @@ const SearchPage = ({
             style={{
           
               padding: "27px 24px 27px 24px",
-              
-           
+            
               
             }}
           >
@@ -146,12 +145,13 @@ const SearchPage = ({
               display: "grid",
               gridTemplateColumns: "repeat(4, 1fr)",
               gap: "1rem",
+              borderRadius:'10px',
             }}
           >
             <div 
               style={{
                 gridColumn: "span 3",
-        
+                 
                 borderRadius:'10px'
               }}
             >

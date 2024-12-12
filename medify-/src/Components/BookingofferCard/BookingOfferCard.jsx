@@ -1,6 +1,6 @@
 import React from "react";
 import bookingOfferImage from "../../assets/sensodyne_dweb.png.png";
-import "./BookingOfferCard.css"; // Import the CSS file
+import "./BookingOfferCard.css"; 
 
 const BookingOfferCard = () => {
   return (
