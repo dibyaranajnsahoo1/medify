@@ -1,0 +1,100 @@
+.search-page {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(81deg, #eff5fe 9.01%, rgba(241, 247, 255, 0.47) 89.11%);
+  }
+  
+  .blue-banner {
+    background-color: #2aa7ff;
+    height: 110px;
+    width: 100%;
+    border-radius: 0 0 16px 16px;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: -50px;
+    margin-bottom: 6rem;
+  }
+  
+  .search-content {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    margin: 0 auto;
+  }
+  
+  .search-bar-container {
+    padding: 27px 24px;
+  }
+  
+  .hospital-info {
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hospital-count {
+    font-family: 'Poppins';
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    margin-left: 20px;
+  }
+  
+  .verified-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .verified-info img {
+   margin-top: -10px;
+  }
+  
+  .hospital-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    border-radius: 10px;
+  }
+  
+  .hospital-cards {
+    grid-column: span 3;
+    border-radius: 10px;
+  }
+  
+  .booking-offer {
+    grid-column: span 1;
+    margin-top: -10px;
+  }
+  
+  @media (max-width: 768px) {
+    .hospital-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .hospital-cards {
+      grid-column: span 2;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hospital-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .hospital-cards {
+      grid-column: span 1;
+    }
+    .booking-offer {
+        grid-column: span 1;
+        margin-top: -10px;
+        width: 100%;
+      }
+  }
+  

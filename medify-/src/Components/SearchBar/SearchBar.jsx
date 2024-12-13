@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./SearchBar.css";
-import SearchIcon from "../../assets/searchIcon.png";
+
 import buttonSearchIcon from "../../assets/buttonsearchIcon.png";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -93,7 +93,7 @@ const SearchBar = ({
       )}
 
       {type === "bookings" && (
-        <div className="searchBox state flex-grow" style={{ flexGrow: 1}} >
+        <div className="searchBox state flex-grow" style={{ flexGrow: 1 , }} >
           <div style={{ display: 'flex', width: '100%', gap: '16px', padding: '16px' }}>
             <LocationOnOutlinedIcon sx={{ mr: 1 }} />
             <input type="text" className="w-full" placeholder="Search By Hospital"/>

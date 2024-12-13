@@ -24,6 +24,7 @@ function App() {
       );
       const data = res.data;
       setStates(data);
+      console.log(setStates)
     } catch (error) {
       console.log(error);
     }
@@ -48,23 +49,21 @@ function App() {
       );
       const data = res.data;
       setHospitals(data);
+      console.log(setHospitals)
     } catch (error) {
       console.log(error);
     }
   };
 
-  // const handleBooking = (hospital, date, slot) => {
-  //   setBookings((prevBookings) => [...prevBookings, { hospital, date, slot }]);
-  // };
 
   const handleBooking = (hospital, date, slot) => {
     const newBooking = { hospital, date, slot };
 
-    // Update state
+ 
     setBookings((prevBookings) => {
       const updatedBookings = [...prevBookings, newBooking];
 
-      // Save to localStorage
+     
       localStorage.setItem("bookings", JSON.stringify(updatedBookings));
 
       return updatedBookings;

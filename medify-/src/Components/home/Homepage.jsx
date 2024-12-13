@@ -31,7 +31,7 @@ const Homepage = ({
   const handleSearch = () => {
     if (!currentState || !currentCity) {
       console.log("Please select both a state and a city.");
-      return; // Prevent searching if state or city is not selected
+      return; 
     }
     console.log("searching");
     fetchHospitals(currentState, currentCity);

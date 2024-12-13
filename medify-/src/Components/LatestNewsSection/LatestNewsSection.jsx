@@ -14,7 +14,7 @@ const LatestNewsSection = () => {
         <div className="latest-news-cards">
       
             <div className="latest-news-card">
-              <img src={latestNewsImg} alt="stock" />
+              <img className="latest-news-card-img" src={latestNewsImg} alt="stock" />
               <div className="latest-news-card-details">
                 <div className="category-and-date">
                   <p>Medical</p>
@@ -28,7 +28,6 @@ const LatestNewsSection = () => {
                 </div>
               </div>
             </div>
-
             <div className="latest-news-card">
               <img src={latestNewsImg} alt="stock" />
               <div className="latest-news-card-details">
@@ -44,7 +43,6 @@ const LatestNewsSection = () => {
                 </div>
               </div>
             </div>
-
             <div className="latest-news-card">
               <img src={latestNewsImg} alt="stock" />
               <div className="latest-news-card-details">

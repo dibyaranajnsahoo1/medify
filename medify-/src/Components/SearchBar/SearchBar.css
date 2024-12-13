@@ -58,3 +58,149 @@ height: fit-content;
 .state {
   width: fit-content;
 }
+.wrapper-searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  background: #ffffff;
+  width: 1166px;
+  margin: 0 auto;
+  height: 111px;
+  gap: 1rem;
+  padding: 27px 24px;
+  border-radius: 15px;
+  top: 159px;
+  left: 135px;
+  box-shadow: 6px 6px 35px 0px #1028511c;
+}
+
+.searchBox {
+  display: flex;
+  width: 285px;
+  height: fit-content;
+  border: 1px solid #f0f0f0;
+  background: #fafbfe;
+  border-radius: 0.5rem;
+  height: 50px;
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  background: #fafbfe;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+}
+
+.button-search {
+  width: 231px;
+  height: 50px;
+  border-radius: 8px;
+  background: #2aa8ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.city {
+  flex-grow: 1;
+}
+
+.state {
+  width: fit-content;
+}
+@media (max-width: 1024px) {
+  .wrapper-searchBar {
+    flex-direction: column;
+    width: 90%;
+    top: 140px;
+    left: 5%;
+    padding: 20px;
+    height: auto;
+    gap: 20px;
+  }
+
+  .searchBox {
+    width: 100%;
+    height: 45px;
+  }
+
+  .button-search {
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+  }
+
+  .searchBox input {
+    font-size: 12px;
+  }
+
+  .state {
+    width: 100%;
+  }
+
+  .city {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper-searchBar {
+    width: 100%;
+    top: 110px;
+    left: 0;
+    padding: 16px;
+    gap: 15px;
+  }
+
+  .searchBox {
+    width: 100%;
+    height: 40px;
+  }
+
+  .searchBox input {
+    font-size: 12px;
+  }
+
+  .button-search {
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+  }
+
+  .searchBox input {
+    font-size: 14px;
+  }
+
+  .state {
+    width: 100%;
+  }
+
+  .city {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .wrapper-searchBar {
+    padding: 12px;
+    top: 80px;
+  }
+
+  .searchBox {
+    width: 100%;
+    height: 35px;
+  }
+
+  .button-search {
+    width: 100%;
+    height: 40px;
+  }
+
+  .searchBox input {
+    font-size: 12px;
+  }
+}

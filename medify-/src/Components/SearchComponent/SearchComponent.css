@@ -54,13 +54,20 @@ img {
   background-color: #2799eb;
   color: rgb(253, 243, 243);
   border: none;
-  border-radius: 0.5rem;
-  height: 50px;
-  padding: 8px 20px 8px 8px;
-  margin: auto;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
+
+  width: 121px;
 }
 
+
+.button img{
+  margin:-10px;
+  padding: 10px;
+  margin-right: 5px;
+
+}
 .wrapper-card {
   display: flex;
   justify-content: space-between;
@@ -200,5 +207,97 @@ img {
   .suggestion-heading {
     font-size: 16px;
     margin-top: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  .wrapper-searchComponent {
+    width: 90%;
+    padding: 2rem 1.5rem;
+  }
+
+  .wrapper-searchBox {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .searchBox {
+    width: 100%;
+  }
+
+  .button {
+    width: 70%;
+  }
+
+  .wrapper-card {
+    gap: 20px;
+  }
+
+  .card {
+    width: 48%;
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper-searchComponent {
+    width: 100%;
+    padding: 1.5rem;
+    top: 0; /* Adjust to align with smaller layouts */
+  }
+
+  .wrapper-searchBox {
+    gap: 25px;
+  }
+
+  .button {
+    width: 75%;
+    padding: 10px;
+  }
+
+  .wrapper-card {
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .suggestion-heading {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrapper-searchComponent {
+    padding: 1rem;
+  }
+
+  .searchBox {
+    padding: 0.5rem;
+  }
+
+  .button {
+    width: 80%;
+    padding: 8px;
+  }
+
+  .card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .suggestion-heading {
+    font-size: 16px;
+    margin-top: 1.5rem;
   }
 }

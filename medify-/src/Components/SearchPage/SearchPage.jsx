@@ -7,8 +7,8 @@ import BookingCard from "../BookingCard/BookingCard";
 import grayTick from "../../assets/verified.1f87346e730e 1.png";
 import Faq from "../Faq/Faq";
 import AppDownload from "../AppDownload/AppDownload";
-import Footer from "../Footer/Footer";
-import SearchComponent from "../SearchComponent/SearchComponent";
+import Footer from "../Footer/Footer"
+import "./SearchPage.css";
 
 const SearchPage = ({
   hospitals,
@@ -37,54 +37,13 @@ const SearchPage = ({
   };
 
   return (
-    <div
-      style={{
-        position: "relative",
-        minHeight: "100vh",
-        background:
-          "linear-gradient(81deg, #EFF5FE 9.01%, rgba(241, 247, 255, 0.47) 89.11%)",
-      }}
-    >
+    <div className="search-page">
       <HeaderRibbon />
       <Navbar type="search" />
-      <div
-        style={{
-          backgroundColor: "#2AA7FF",
-          height: "110px",
-          width: "100%",
-          borderRadius: "0 0 16px 16px",
-        }}
-      ></div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "80%",
-          margin: "0 auto",
-          marginTop: "-50px",
-          marginBottom: "6rem",
-       
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            display: "grid",
-            gridTemplateRows: "auto 1fr",
-            gap: "1rem", 
-            margin: "0 auto",
-            
-          }}
-        >
-          <div
-            style={{
-          
-              padding: "27px 24px 27px 24px",
-            
-              
-            }}
-          >
+      <div className="blue-banner"></div>
+      <div className="search-container">
+        <div className="search-content">
+          <div className="search-bar-container">
             <SearchBar
               states={states}
               fetchCities={fetchCities}
@@ -98,37 +57,12 @@ const SearchPage = ({
             />
           </div>
           {Array.isArray(hospitals) && hospitals.length > 0 ? (
-            <div
-              style={{
-                marginTop: "4rem",
-                marginBottom: "0.5rem",
-                       
-                
-              }}
-            >
-              <p
-                style={{
-                  marginTop: "4rem",
-                marginBottom: "0.5rem",
-                fontFamily: 'Poppins',
-                fontSize: '24px',
-                fontWeight: '500',
-                lineHeight: '36px',
-                marginLeft:'20px'
-                
-                }}
-              >
+            <div className="hospital-info">
+              <p className="hospital-count">
                 {hospitals.length} medical centers available in{" "}
                 {hospitals[0].State}
               </p>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  
-                }}
-              >
+              <div className="verified-info">
                 <img src={grayTick} alt="Gray tick icon" />
                 <p>
                   Book appointments with minimum wait-time & verified doctor
@@ -140,36 +74,18 @@ const SearchPage = ({
             "No hospitals found"
           )}
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
-              gap: "1rem",
-              borderRadius:'10px',
-            }}
-          >
-            <div 
-              style={{
-                gridColumn: "span 3",
-                 
-                borderRadius:'10px'
-              }}
-            >
+          <div className="hospital-grid">
+            <div className="hospital-cards">
               {hospitals.map((hospital) => (
                 <BookingCard
                   hospital={hospital}
-                  key={hospital["Provider ID"]} 
+                  key={hospital["Provider ID"]}
                   onBooking={onBooking}
                   type="search"
                 />
               ))}
             </div>
-            <div
-              style={{
-                gridColumn: "span 1",
-                marginTop: "-10px",
-              }}
-            >
+            <div className="booking-offer">
               <BookingOfferCard />
             </div>
           </div>

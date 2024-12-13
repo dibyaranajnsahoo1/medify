@@ -65,17 +65,90 @@ h1{
   padding: 0;
 }
 
-@media (min-width: 768px) {
-  h1 {
-    font-size: 36px;
+/* Base styles for larger screens remain as is */
+
+/* Adjustments for medium screens (tablets) */
+@media (max-width: 1024px) {
+  .doctors-carousel {
+    width: 100%;
+    padding: 2rem 1rem;
+    height: auto;
   }
 
   .slide-img {
-    height: 350px;
-    width: 300px;
+    height: 300px;
+    width: 260px;
   }
 
   .slide-name {
     font-size: 20px;
+    line-height: 36px;
+  }
+
+  .slide-specialisation {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+}
+
+/* Adjustments for smaller screens (mobile) */
+@media (max-width: 768px) {
+  .doctors-carousel {
+    padding: 2rem 1rem;
+  }
+
+  .slide-img {
+    height: 240px;
+    width: 200px;
+  }
+
+  .slide-name {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .slide-specialisation {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 42px;
+    padding: 0 1rem;
+  }
+}
+
+/* Adjustments for extra-small screens (phones) */
+@media (max-width: 480px) {
+  .doctors-carousel {
+    padding: 1rem;
+    height: auto;
+  }
+
+  .slide-img {
+    height: 200px;
+    width: 160px;
+    box-shadow: 0px 10px 35px -10px #00000017;
+  }
+
+  .slide-name {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .slide-specialisation {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+    line-height: 36px;
   }
 }

@@ -17,7 +17,7 @@ const MyBookingsPage = ({ bookings, onBooking, hospitals }) => {
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '80%', margin: '0 auto', marginTop: '-60px', marginBottom: '24px' }}>
         <div style={{ width: '100%', display: 'grid', gridTemplateRows: 'auto 1fr', gap: '16px', margin: '0 auto' }}>
           <div style={{ width: '100%', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-            <h1 style={{ color: 'white', fontWeight: 'bold', fontSize: '40px', marginLeft: '12px'}}>
+            <h1 style={{ color: 'white', fontWeight: 'bold', fontSize: '40px', marginLeft: '12px', marginTop:'-20px', position:'relative'}}>
               My Bookings
             </h1>
             <div style={{ width: '50px'}}>

@@ -134,21 +134,39 @@
     width: 100%; 
     padding: 0 10px; 
   }
-  .specialisation-cards {
-    flex-direction: column; 
-    gap: 1rem; 
+  .specialisation-cards .wrapper-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
   }
   .specialisation-card {
-    width: 100%; 
-    height: 120px; 
-    margin-bottom: 1rem; 
+    flex: 1 1 calc(25% - 16px); 
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out; 
+    flex: none;
   }
   .specialisation-card img {
-    width: 50px; 
-    height: 50px; 
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
   }
   .view-all-button {
     width: 100%;
     height: 45px; 
   }
+  .specialisation-heading{
+    width: 532px;
+    height: 67px;
+    font-family: Poppins;
+    font-weight: 600;
+    align-items: center;
+    font-size: 18px;
+    line-height: 67px;
+    color: #1b3c74;
+  }
+
 }

@@ -60,6 +60,7 @@ const SearchComponent = ({
             setCurrentState(newValue);
             if (newValue) fetchCities(newValue);
           }}
+          
         />
         <SearchBox
           placeholder="City"
@@ -67,10 +68,15 @@ const SearchComponent = ({
           value={currentCity}
           onChange={(e, newValue) => setCurrentCity(newValue)}
         />
-        <button className="button" onClick={handleSearch} aria-label="Search">
-          <img src={buttonSearchIcon} alt="Search Button Icon" />
-          Search
-        </button>
+         <button className="button"   onClick={() => {if (!currentState || !currentCity) {alert("Please select both a state and a city.");
+      return;
+    }
+    handleSearch();
+  }} aria-label="Search" style={{height:'50px', display:'flex', justifyContent:'center', textAlign:'center', alignItems:'center', borderRadius:'8px'}}>
+        <img src={buttonSearchIcon} alt="Search Button Icon" />
+        Search
+      </button>
+      
       </div>
 
       {type === "home" && (

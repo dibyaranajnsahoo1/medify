@@ -25,6 +25,7 @@ const HeroComponent = () => {
             src={heroImage}
             alt="heroimage"
             style={{
+              filter: 'drop-shadow( 3px 2px 5px #222)',
               overflow: "visible",
               paddingTop:"50px",
             
