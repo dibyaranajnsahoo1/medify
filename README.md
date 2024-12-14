@@ -4,7 +4,6 @@
 
 **Medify** is a React-based web application that allows users to search for medical centers in a specific state and city in the USA, book appointments, and view their bookings. The platform is designed with a responsive layout and provides various sections such as Find Doctors, Hospitals, Medicines, and more, as per the Figma design. The platform integrates with a backend API to fetch data such as states, cities, and medical centers.
 
-![Medify Banner](https://your-repository-url/path-to-image/banner-image.png) 
 
 ---
 
