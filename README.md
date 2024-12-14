@@ -14,7 +14,7 @@ Live link - https://medify-taupe.vercel.app/
 - **Navigation Bar**: Allows users to navigate through different sections such as "Find Doctors", "Hospitals", "Medicines", etc.
 - **State and City Selection**: Users can select a state and city from dropdown menus. Options are fetched dynamically via the API.
 - **Search**: Based on the selected state and city, users are shown a list of available medical centers in that area.
-- **Other Sections**: Additional sections as provided in the Figma design.
+
 
 ![Landing Page Screenshot](https://github.com/dibyaranajnsahoo1/medify/blob/main/Screenshot%202024-12-14%20134618.png)
 
