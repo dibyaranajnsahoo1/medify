@@ -32,7 +32,7 @@ const SearchPage = ({
       await fetchHospitals(currentState, currentCity);
     } catch (error) {
       console.error("Error fetching hospitals:", error);
-      alert("An error occurred while fetching hospitals.");
+      alert("An error while fetching hospitals.");
     }
   };
 

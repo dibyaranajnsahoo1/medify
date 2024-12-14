@@ -68,8 +68,9 @@ const SearchComponent = ({
           value={currentCity}
           onChange={(e, newValue) => setCurrentCity(newValue)}
         />
-         <button className="button"   onClick={() => {if (!currentState || !currentCity) {alert("Please select both a state and a city.");
-      return;
+         <button className="button"   
+         onClick={() => {if (!currentState || !currentCity) {alert("Please select both a state and a city.");
+          return;
     }
     handleSearch();
   }} aria-label="Search" style={{height:'50px', display:'flex', justifyContent:'center', textAlign:'center', alignItems:'center', borderRadius:'8px'}}>

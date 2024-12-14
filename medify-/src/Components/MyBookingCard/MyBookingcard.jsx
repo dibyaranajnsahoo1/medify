@@ -19,7 +19,7 @@ const MyBookingcard = ({ hospital, booking }) => {
             <p>{hospital["Hospital Name"]}</p>
             <p>{`${hospital.City}, ${hospital.State}`}</p>
             <p>{hospital["Hospital Type"]}</p>
-            <img className = "card-info-img" src={Like} alt="like" />
+            <img className = "card-info-img" src={Like} alt="like" style={{width:'60px', height:'50px'}} />
           </div>
 
           <div className="button-container">

@@ -17,6 +17,10 @@ function App() {
 
   const [bookings, setBookings] = useState([]);
 
+
+
+
+
   const fetchStates = async () => {
     try {
       const res = await axios.get(
@@ -24,7 +28,7 @@ function App() {
       );
       const data = res.data;
       setStates(data);
-      console.log(setStates)
+      
     } catch (error) {
       console.log(error);
     }
@@ -41,6 +45,7 @@ function App() {
       console.log(error);
     }
   };
+ 
 
   const fetchHospitals = async (state, city) => {
     try {

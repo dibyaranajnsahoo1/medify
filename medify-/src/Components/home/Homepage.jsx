@@ -16,6 +16,8 @@ import Slides from '../../Components/Slides/Slide'
 
 
 
+
+
 const Homepage = ({
   states,
   fetchCities,
@@ -66,5 +68,6 @@ const Homepage = ({
     </div>
   );
 };
+
 
 export default Homepage;

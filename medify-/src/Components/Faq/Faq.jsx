@@ -18,7 +18,7 @@ const Faq = () => {
             style={{
               fontSize: "1rem",
               fontWeight: "600",
-              color: "var(--primary-color)",
+              color: "#2AA7FF",
             }}
           >
             Get Your Answer
@@ -27,7 +27,6 @@ const Faq = () => {
         </div>
         <div className="faq-content">
           <div className="faq-content-images">
-            {/* images here */}
             <img src={faqImage} alt="stock-image" className="faq-image" />
             <img
               src={happyPatients}
@@ -37,7 +36,6 @@ const Faq = () => {
             <img src={faqLove} alt="" className="faq-love" />
           </div>
           <div className="accordion">
-            {/* accordion here */}
             <Accordion
               sx={{
                 boxShadow: "none",

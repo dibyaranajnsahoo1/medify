@@ -96,7 +96,7 @@
   background-color: #0b6eb5; 
 }
 
-/* Responsive Design */
+
 @media (max-width: 1200px) {
   .specialisation-cards {
     gap: 1.5rem; 

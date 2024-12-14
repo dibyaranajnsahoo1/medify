@@ -1,7 +1,6 @@
 import HeaderRibbon from "../HeaderRibbon/HeaderRibbon";
 import Navbar from "../Navbar/Navbar";
 import SearchBar from "../SearchBar/SearchBar";
-import BookingCard from "../BookingCard/BookingCard";
 import BookingOfferCard from "../BookingofferCard/BookingOfferCard";
 import MyBookingcard from "../MyBookingCard/MyBookingcard";
 import AppDownload from "../AppDownload/AppDownload";

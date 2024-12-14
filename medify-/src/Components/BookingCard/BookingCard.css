@@ -89,25 +89,33 @@
 .slots-section {
   width: 100%;
   background-color: white;
+  border-radius: 14px;
+ 
 }
 
 .tabs-container {
   width: 80%;
   margin: 0 auto;
+  border-radius: 14px;
+ 
 }
 
 .slots-content {
   margin-top: 16px;
+  border-radius: 14px;
+
 }
 
 .slot-period-container {
   display: flex;
   align-items: center;
   gap: 48px;
-  padding: 20px 16px;
+  padding: 25px;
   background-color: white;
   width: 100%;
   border-bottom: 2px solid #e0e0e0;
+  border-radius: 14px;
+ 
 }
 
 .period-heading h4 {

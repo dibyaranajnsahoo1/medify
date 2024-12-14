@@ -115,8 +115,33 @@
       width: 100%;
       text-align: center;
     }
-    .card-info img {
+    .card-info-img {
+      width: 10px;
        
+      }
+      .button-date {
+       
+        margin-top: 0px;
+      }
+      
+      .button-slot {
+        
+        margin-top: 0px;
+       
+      }
+      .card-info p:first-child {
+       
+      
+        font-size: 12px;
+      }
+      
+      .card-info p:nth-child(2) {
+     
+        font-size: 8px;
+      }
+      .card-info p:nth-child(3) {
+     
+        font-size: 7px;
       }
   }
   
