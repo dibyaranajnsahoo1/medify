@@ -15,7 +15,7 @@
   padding: 27px 24px 27px 24px;
   gap: 29px;
   border-radius: 15px;
-  opacity: 0px;
+
   box-shadow: 6px 6px 35px 0px #1028511C;
 
 
@@ -43,7 +43,7 @@
 height: 50px;
 gap: 0px;
 border-radius: 8px;
-opacity: 0px;
+
 background: #2AA8FF;
 color: white;
 border: none;

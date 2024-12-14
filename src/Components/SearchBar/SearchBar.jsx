@@ -18,7 +18,7 @@ const SearchBar = ({
   type,
 }) => {
   return (
-    <div className="wrapper-searchBar shadow-xl" style={type==='bookings'?{ width:'780px', borderRadius:'15px', left:'521px'}:undefined}>
+    <div className="wrapper-searchBar shadow-xl" style={type === 'bookings' ? { width: '780px', borderRadius: '15px', left: '521px' } : undefined}>
       {type === "search" && (
         <>
           <div className="searchBox state">
@@ -35,26 +35,24 @@ const SearchBar = ({
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  placeholder="state"
+                  placeholder="State"
                   variant="standard"
                   sx={{
                     "& .MuiInput-underline:before": { borderBottom: "none" },
-                    "& .MuiInput-underline:hover:before": {
-                      borderBottom: "none",
-                    },
+                    "& .MuiInput-underline:hover:before": { borderBottom: "none" },
                     "& .MuiInput-underline:after": { borderBottom: "none" },
                     "& .MuiAutocomplete-endAdornment": { display: "none" },
                   }}
                   disableClearable
                 />
               )}
-              style={{ width: '326px',
+              style={{
+                width: '326px',
                 height: '30px',
                 gap: '0px',
                 borderRadius: '8px 0px 0px 0px',
-                border: '1px 0px 0px 0px',
-                opacity: '0px'
-                 }}
+                
+              }}
             />
           </div>
           <div className="searchBox city">
@@ -72,31 +70,29 @@ const SearchBar = ({
                   variant="standard"
                   sx={{
                     "& .MuiInput-underline:before": { borderBottom: "none" },
-                    "& .MuiInput-underline:hover:before": {
-                      borderBottom: "none",
-                    },
+                    "& .MuiInput-underline:hover:before": { borderBottom: "none" },
                     "& .MuiInput-underline:after": { borderBottom: "none" },
                     "& .MuiAutocomplete-endAdornment": { display: "none" },
                   }}
                   disableClearable
                 />
               )}
-              style={{ width: '522px',
+              style={{
+                width: '522px',
                 height: '30px',
                 gap: '0px',
-                border: '1px 0px 0px 0px',
-                opacity:' 0px'
-                 }}
+             
+              }}
             />
           </div>
         </>
       )}
 
       {type === "bookings" && (
-        <div className="searchBox state flex-grow" style={{ flexGrow: 1 , }} >
+        <div className="searchBox state flex-grow" style={{ flexGrow: 1 }}>
           <div style={{ display: 'flex', width: '100%', gap: '16px', padding: '16px' }}>
             <LocationOnOutlinedIcon sx={{ mr: 1 }} />
-            <input type="text" className="w-full" placeholder="Search By Hospital"/>
+            <input type="text" className="w-full" placeholder="Search By Hospital" />
           </div>
         </div>
       )}
