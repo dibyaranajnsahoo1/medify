@@ -88,6 +88,9 @@ const Footer = () => {
         <div className="copyright">
           Copyright ©2023 Surya Nursing Home.com. All Rights Reserved
         </div>
+        <div style={{display:'none'}}>
+          Dibya ranjan sahoo
+        </div>
       </div>
     </div>
   );
