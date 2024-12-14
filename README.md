@@ -16,7 +16,7 @@
 - **Search**: Based on the selected state and city, users are shown a list of available medical centers in that area.
 - **Other Sections**: Additional sections as provided in the Figma design.
 
-![Landing Page Screenshot](https://your-repository-url/path-to-image/landing-page.png)
+![Landing Page Screenshot](https://github.com/dibyaranajnsahoo1/medify/blob/main/Screenshot%202024-12-14%20134618.png)
 
 ### 2. **Search Results Page**
 - Displays available medical centers in the selected state and city.
@@ -28,7 +28,7 @@
 - Appointment booking is possible within a time frame from today up to one week in advance.
 - The interface includes a calendar-like selection for the date and available time slots for booking.
 
-![Booking Interface](https://your-repository-url/path-to-image/booking-interface.png)
+![Booking Interface](https://github.com/dibyaranajnsahoo1/medify/blob/main/Screenshot%202024-12-14%20134705.png?raw=true)
 
 ### 4. **My Bookings Page**
 - Displays a personalized list of all user bookings, including:
@@ -43,6 +43,8 @@
 - Swiper carousel used for displaying relevant information in an interactive and responsive format.
 
 ---
+![Slot_Booking ](https://github.com/dibyaranajnsahoo1/medify/blob/main/Screenshot%202024-12-14%20134712.png?raw=true)
+![MyBookings ](https://github.com/dibyaranajnsahoo1/medify/blob/main/Screenshot%202024-12-14%20134723.png?raw=true)
 
 ## API Integration
 
